@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+#counterDiv {
+  padding : 10px;
+  margin : 10px;
+  border : solid thin #AAA;
+  font-size : 24px;
+  width : 300px;
+  text-align : center;
+}
+
+#value {
+  padding : 2px 10px;
+  background-color : rgba(256,128,128,0.5);
+}

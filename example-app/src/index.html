@@ -1,0 +1,42 @@
+
+<!-- la page html qui intégrera le script construit par webpack à partir de main.js et servira de "page de base" -->
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>exemple webpack</title>
+
+	<link rel="stylesheet" type="text/css" href="./style/style.css" />
+
+</head>
+
+
+<body>
+
+	<div class="main">
+		Hello you !
+	</div>
+
+  <div id="result" class="test">
+      IMPORT FAIL  <!-- texte qui s'affichera si l'import des modules n'a pas fonctionné -->
+  </div>
+
+	<div id = "counterDiv">counter :
+		<span id="value"></span>
+		<button id="increment">increment</button>
+	</div>
+
+	<div>
+		<!-- noter le 'alt' qui s'affichera si la source n'est pas modifiée par le script -->
+		<img id="timoleon" src="" alt="importing image failed"/>
+	</div>
+
+  <!-- le lien suivant sert simplement à mettre en évidence la recopie des fichiers du dossier src/html vers dist/html -->
+	<p><a href="html/other.html">lien vers une autre page html</a></p>
+
+  </body>
+
+</html>

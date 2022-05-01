@@ -40,6 +40,7 @@ export default class Game {
         clearInterval(this.refRocketInterval);
     }
 
+    /*
     reset(){
         this.score = 0;
         this.lives = 3;
@@ -54,6 +55,7 @@ export default class Game {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.scoreDisplay.textContent = "0";
     }
+    */
 
     animate(){
         if(this.isRunning && this.lives > 0){
@@ -78,7 +80,7 @@ export default class Game {
             });
 
             this.rockets = this.rockets.filter(rocket => {
-                if(rocket && this.lives > 0){
+                if(rocket){
                     this.eggs = this.eggs.filter( egg => !rocket.collidesWith(egg)) 
                     rocket.draw(this.context);
                     rocket.move();
@@ -91,9 +93,8 @@ export default class Game {
                         this.lives -= 1;
                         if(this.lives === 0){
                             this.stop();
-                            this.reset();
                             alert("Perdu !");
-                            window.location.href="/"
+                            window.location.reload();
                         }
                         return false;
                     }
